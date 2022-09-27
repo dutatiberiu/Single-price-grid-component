@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*Colors*/
+
+:root {
+  /*Primary*/
+  --Cyan: hsl(179, 62%, 43%);
+  --LighCyan: hsl(179, 62%, 50%);
+  --BrightYellow: hsl(71, 73%, 54%);
+  /*Neutral*/
+  --LightGray: hsl(204, 43%, 93%);
+  --GrayishBlue: hsl(218, 22%, 67%);
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--LightGray);
+}
+
+.main {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: grid;
+  border-radius: 7px;
+  overflow: hidden;
+  background-color: #fff;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "a a" "b c";
+  margin: 2rem 1rem;
+}
+
+.box {
+  padding: 2.5rem;
+}
+
+.box1 {
+  grid-area: a;
+  padding: 2.5rem;
+}
+
+.box2 {
+  grid-area: b;
+  background-color: var(--Cyan);
+}
+
+.box3 {
+  grid-area: c;
+  background-color: var(--LighCyan);
+}
+
+h1 {
+  color: var(--Cyan);
+  font-size: 1.625rem;
+  padding-bottom: 1.25rem;
+}
+
+h3 {
+  color: var(--BrightYellow);
+  padding-bottom: 0.75rem;
+}
+
+.box1 p {
+  color: var(--GrayishBlue);
+  line-height: 1.4;
+}
+
+h2 {
+  color: #fff;
+  font-size: 1.25rem;
+  padding-bottom: 0.938rem;
+}
+
+h5 {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.625rem;
+}
+
+h5 span.price {
+  color: #fff;
+  font-size: 1.75rem;
+  font-weight: 700;
+  padding-right: 0.625rem;
+}
+
+h5 span {
+  color: hsl(204, 43%, 93%);
+  font-weight: 400;
+}
+
+.box2 p {
+  color: #fff;
+}
+
+.box2 a {
+  display: block;
+  text-align: center;
+  background-color: hsl(71, 73%, 54%);
+  text-decoration: none;
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.813rem;
+  padding: 0.75rem 0;
+  border-radius: 0.25rem;
+  margin-top: 1.875rem;
+}
+
+.box3 ul {
+  list-style: none;
+}
+
+.box3 li {
+  color: #fff;
+  padding-bottom: 0.25rem;
+  font-size: 0.875rem;
+}
+
+@media only screen and (max-width: 425px) {
+  .wrapper {
+    grid-template-columns: 100%;
+    grid-template-areas: "a" "b" "c";
+  }
+
+  .box {
+    padding: 1.875em;
+  }
+}
